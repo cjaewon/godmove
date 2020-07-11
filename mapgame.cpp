@@ -19,16 +19,14 @@ void menu();
 //변수지정
 int p = 0;
 int t=0;
-int tt = 0;
-int ttt = 0;
-int tttt = 0;
 int score = 0;
 int level = 0;
+// player x, y current
 int px=50;
 int py=7;
+// player x, y before
 int pxb = 0;
 int pyb = 0;
-int hello = 0;
 int times = 0;
 int ri = 35;
 int lol =0;
@@ -54,7 +52,6 @@ int main()
 	py = 7;
 	pxb = 0;
 	pyb = 0;
-	hello = 0;
 	times = 0;
 	ri = 35;
 	lol = 0;
@@ -201,6 +198,7 @@ void player()
 	}
 }
 
+// 플레이어가 맵 밖에 나가는 것을 방지
 void playerout() {
 	if (px==45) px += 1;
 	else if (py==0) py += 1;
@@ -326,7 +324,7 @@ void cursor_view(char s)      // 0넣으면숨기기, 1넣으면보이기
 	ConsoleCursor.dwSize = 2;
 	SetConsoleCursorInfo(hConsole, &ConsoleCursor);
 }
-void maker()   // 0넣으면숨기기, 1넣으면보이기
+void maker()  
 {
 	cout << "\t\t\t      제작:cj" << endl;
 	cout << "\t\t\t      게임명:GodMove" << endl;
